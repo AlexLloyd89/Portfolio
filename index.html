@@ -5,44 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Portfolio | Alex Lloyd</title>
-    <link rel="stylesheet" type="text/css" href="assets/style.css" />
+    <link rel="stylesheet" type="text/css" href="Assets/style.css" />
     <!-- Google Font -->
     <link
       href="https://fonts.googleapis.com/css?family=Forum"
       rel="stylesheet"
     />
   </head>
-
   <body>
     <div class="layer"></div>
+    <!-- Begin Nav Bar -->
     <nav role="navigation">
       <div id="menuToggle">
-        <!--
-          A fake / hidden checkbox is used as click reciever,
-          so you can use the :checked selector on it.
-        -->
-        <input type="checkbox" />
-
-        <!--
-          Some spans to act as a hamburger.
-
-          They are acting like a real hamburger,
-          not that McDonalds stuff.
-        -->
-        <span></span> <span></span> <span></span>
-
-        <!--
-          Too bad the menu has to be inside of the button
-          but hey, it's pure CSS magic.
-        -->
+        <input type="checkbox" /> <span></span> <span></span> <span></span>
         <ul id="menu">
           <a href="https://alexlloyd89.github.io/Portfolio/"> <li>Home</li> </a>
-          <a href="#"> <li>About</li> </a>
+          <a href="https://alexlloyd89.github.io/Portfolio/about.html">
+            <li>About</li>
+          </a>
           <a href="#"> <li>Info</li> </a>
           <a href="#"> <li>Contact</li> </a>
         </ul>
       </div>
     </nav>
+    <!-- End Nav Bar -->
     <div class="contain">
       <div data-tilt>
         <div class="intro">
@@ -62,6 +48,6 @@
     <!-- Tilt JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
     <!-- JavaScript -->
-    <script type="text/javascript" src="assets/script.js"></script>
+    <script type="text/javascript" src="Assets/script.js"></script>
   </body>
 </html>
