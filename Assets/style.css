@@ -125,7 +125,7 @@ a:hover
 /* Introduction Section */
 #header{
   margin: 0 auto;
-  background: url(images/candles.gif);
+  background: url('https://media.giphy.com/media/7AaQpuLZTu4gOIfrPw/giphy.gif');
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -181,7 +181,11 @@ a:hover
   position: relative;
   display: flex
 }
-
+#canvas{
+    position: absolute;
+    z-index: -1;
+    width: inherit;
+}
 #about-items{
  display: flex;
  flex-direction: row;
