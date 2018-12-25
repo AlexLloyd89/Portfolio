@@ -1,5 +1,6 @@
 body{
-  margin: 0
+  margin: 0;
+  width: 100%;
 }
 /*Menu*/
 a
@@ -155,6 +156,7 @@ a:hover
   .intro{
       text-align: center;
       color: white;
+      text-shadow: 4px 4px 3px black;
       font-size: 250px;
       font-family: 'Major Mono Display', monospace
   }
@@ -163,6 +165,7 @@ a:hover
       font-size:25px;
       text-align: center;
       color: white;
+      font-family: 'Muli', sans-serif;
   }
 
 
@@ -179,7 +182,8 @@ a:hover
   min-height: 500px;
   mix-blend-mode: screen;
   position: relative;
-  display: flex
+  display: flex;
+  overflow: hidden
 }
 #canvas{
     position: absolute;
@@ -212,5 +216,144 @@ a:hover
   font-size:20px;
   text-align: left;
   color: white;
+  background: #171617;
   padding-left: 30px;
+  text-shadow: 2px 2px 1px black;
+  font-family: 'Muli', sans-serif;
+}
+
+/* Projects Section */
+#projects{
+margin: 0 auto;
+  background: url('images/matthieu-joannon-409753-unsplash.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 650px;
+  padding-bottom: 200px;
+  height: 100%;
+  width: 100%;
+  }
+.project-layer{
+  background: #0000006e;
+}
+.hold-projects{
+  display: flex;
+  justify-content: space-evenly;
+}
+.project-picture{
+  width: 500px;
+  height: auto
+  
+}
+
+.container {
+  position: relative;
+  height: fit-content;
+ 
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: auto;
+  width: 500px;
+  opacity: 0;
+  transition: .2s ease;
+  background-color: rgba(0, 0, 0, 0.849);
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.project-text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.fa-code{
+  position: absolute;
+  left: 25%;
+  bottom: 0;
+  padding-bottom: 25px;
+}
+
+.fa-desktop{
+  position: absolute;
+  right: 25%;
+  bottom: 0;
+  padding-bottom: 25px;
+}
+
+.projects-intro{
+  padding-bottom: 25px;
+  text-align: center;
+  font-size: 50px;
+  font-family: 'Major Mono Display', monospace;
+  color: #37f9fb;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  text-shadow: 1px 1px 1px black;
+ }
+
+ .myButton {
+  background-color: transparent;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  display: block;
+  font-size: 25px;
+  padding: 6px 24px;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Major Mono Display', monospace;
+}
+
+/* Music */
+#music{
+  background: #0000006e
+}
+
+.music-layer{
+  max-width: 960px;
+  margin: 0 auto;
+}
+.music-intro{
+  font-size: 100px;
+  font-family: 'Major Mono Display', monospace;
+  color: #37f9fb;
+padding-top: 20px;
+  text-shadow: 1px 1px 1px black;
+  float: left;
+ }
+
+ .music-images{
+  display: flex;
+  flex-direction: column;
+ }
+
+.mi{
+  width: 200px;
+  padding: 20px;
+}
+
+.mi:hover{
+  opacity: .5;
+}
+.mt{
+  color: white;
+  position: relative;
+  text-align: left;
+  align-self: flex-start;
 }

@@ -4,6 +4,8 @@ $(document).ready(function() {
     $(".contain:visible").fadeOut("fast");
     $(".contain:hidden").fadeIn("slow");
   });
+  //Fade
+  AOS.init();
 });
   // Painting
   function OilPainting(){
