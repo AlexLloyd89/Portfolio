@@ -6,7 +6,8 @@ $(document).ready(function() {
   });
   //Fade
   AOS.init();
-});
+  //Year
+  $("#year").text(new Date().getFullYear());
   // Painting
   function OilPainting(){
   
@@ -98,3 +99,4 @@ $(document).ready(function() {
   var app = new OilPainting();
   app.initialize();
 
+});

@@ -1,6 +1,7 @@
 body{
   margin: 0;
   width: 100%;
+  overflow-x: hidden
 }
 /*Menu*/
 a
@@ -230,7 +231,7 @@ margin: 0 auto;
   background-size: cover;
   background-attachment: fixed;
   min-height: 650px;
-  padding-bottom: 200px;
+
   height: 100%;
   width: 100%;
   }
@@ -328,6 +329,7 @@ margin: 0 auto;
 .music-layer{
   max-width: 960px;
   margin: 0 auto;
+  position: relative
 }
 .music-intro{
   font-size: 100px;
@@ -335,7 +337,9 @@ margin: 0 auto;
   color: #37f9fb;
 padding-top: 20px;
   text-shadow: 1px 1px 1px black;
-  float: left;
+  float: left;  
+   border-right: 1px solid #4d468a;
+  border-bottom: 1px solid #4d468a;
  }
 
  .music-images{
@@ -357,3 +361,133 @@ padding-top: 20px;
   text-align: left;
   align-self: flex-start;
 }
+
+iframe {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  height: 170px;
+  width: 200px;
+  opacity: 0;
+  transition: .2s ease;
+  background-color: rgba(0, 0, 0, 0.849);
+}
+
+.container:hover iframe {
+  opacity: 1;
+}
+/*Footer*/
+.footer-distributed{
+	background-color: #292c2f;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: normal 16px sans-serif;
+	padding: 20px 40px;
+
+}
+
+.footer-distributed .footer-left p{
+	color:  #8f9296;
+	font-size: 14px;
+	margin: 0;
+}
+
+/* Footer links */
+
+.footer-distributed p.footer-links{
+    color: #ffffff;
+    margin-top: 18px;
+    margin-bottom: 0px;
+    font-family: 'Major Mono Display', monospace;
+}
+
+.footer-distributed p.footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-right{
+  max-width: 180px;
+  margin-top:18px
+}
+
+.footer-distributed .footer-right a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	background-color:  #33383b;
+	border-radius: 2px;
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+	margin-left: 3px;
+}
+.footer-mid{
+  color: white;
+  font-family: 'Major Mono Display', monospace;
+  font-size: 30px;
+  font-weight: bolder
+}
+
+/* Media Query */
+@media only screen and (max-width: 768px) {
+  /* Intro */
+  #header{
+    min-height: 250px;
+    background-attachment: inherit
+  }
+  .layer{
+    min-height: 450px
+  }
+  .intro{
+    font-size: 100px;
+     }
+  .subhead{
+    font-size: 15px;
+  }
+  /* About Me */
+  #about-items{
+    display: block;
+    width: 350px;
+  }
+  .my-pic{
+    padding-top: 15px;
+    display: block;
+    max-height: 250px;
+  }
+  .about-text{
+    font-size: 15px;
+    padding: 15px;
+  }
+  .about{
+    font-size: 40px;
+  }
+  /* Projects */
+  .projects-intro{
+    font-size: 40px;
+  }
+  .hold-projects{
+    flex-direction: column;
+    align-items: center
+  }
+  .overlay{
+    width: 300px;
+  }
+  .project-picture{
+    width: 300px;
+  }
+  .project-text{
+    font-size: 15px;
+    top: 35%
+  }
+  .myButton{
+    font-size: 15px;
+    width: 300px;
+    margin: 0 auto
+  }
+} 
