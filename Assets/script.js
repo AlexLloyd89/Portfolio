@@ -21,7 +21,7 @@ $(document).ready(function() {
   }else{
     $('.music-intro').text('tHe noise');
   }
-
+});
   // Painting
   function OilPainting(){
     var canvas;
@@ -112,4 +112,3 @@ $(document).ready(function() {
   var app = new OilPainting();
   app.initialize();
 
-});

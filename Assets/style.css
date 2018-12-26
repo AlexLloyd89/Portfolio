@@ -540,7 +540,9 @@ iframe {
   }
   .mi{
     width: 200px;
-padding: 0px;
+    padding: 0px;
   }
-  
+  .overlay-music{
+    left: 0px;
+  }
 } 
