@@ -244,8 +244,8 @@ margin: 0 auto;
 }
 .project-picture{
   width: 500px;
-  height: auto
-  
+  height: auto;
+  box-shadow: 1px 1px 1px black;
 }
 
 .container {
@@ -332,12 +332,14 @@ margin: 0 auto;
   position: relative
 }
 .music-intro{
+  max-width: 400px;
   font-size: 100px;
   font-family: 'Major Mono Display', monospace;
+  text-align: right;
+  float: left;
   color: #37f9fb;
 padding-top: 20px;
   text-shadow: 1px 1px 1px black;
-  float: left;  
    border-right: 1px solid #4d468a;
   border-bottom: 1px solid #4d468a;
  }
@@ -345,29 +347,54 @@ padding-top: 20px;
  .music-images{
   display: flex;
   flex-direction: column;
+  align-self: center
  }
 
 .mi{
   width: 200px;
   padding: 20px;
 }
-
-.mi:hover{
-  opacity: .5;
+.overlay-music {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 20px;
+  right: 0;
+  height: auto;
+  width: 200px;
+  opacity: 0;
+  transition: .2s ease;
+  background-color: rgba(0, 0, 0, 0.849)
 }
-.mt{
+
+.container:hover .overlay-music {
+  opacity: 1;
+}
+
+.mt {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+/* .mt{
   color: white;
   position: relative;
   text-align: left;
   align-self: flex-start;
-}
+} */
 
 iframe {
   position: absolute;
   top: 20px;
   left: 50%;
-  height: 170px;
-  width: 200px;
+  height: 120px;
+  width: 570px;
   opacity: 0;
   transition: .2s ease;
   background-color: rgba(0, 0, 0, 0.849);
@@ -384,7 +411,7 @@ iframe {
 	width: 100%;
 	text-align: left;
 	font: normal 16px sans-serif;
-	padding: 20px 40px;
+	padding: 7px;
 
 }
 
@@ -394,13 +421,12 @@ iframe {
 	margin: 0;
 }
 
-/* Footer links */
-
 .footer-distributed p.footer-links{
-    color: #ffffff;
-    margin-top: 18px;
-    margin-bottom: 0px;
-    font-family: 'Major Mono Display', monospace;
+  color: #ffffff;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  font-family: 'Major Mono Display', monospace;
+  font-size: 12px;
 }
 
 .footer-distributed p.footer-links a{
@@ -412,7 +438,7 @@ iframe {
 
 .footer-distributed .footer-right{
   max-width: 180px;
-  margin-top:18px
+  margin-top:10px
 }
 
 .footer-distributed .footer-right a{
@@ -428,14 +454,14 @@ iframe {
 	margin-left: 3px;
 }
 .footer-mid{
-  color: white;
+  color: #37f9fb;
   font-family: 'Major Mono Display', monospace;
   font-size: 30px;
-  font-weight: bolder
 }
 
 /* Media Query */
 @media only screen and (max-width: 768px) {
+
   /* Intro */
   #header{
     min-height: 250px;
@@ -467,6 +493,9 @@ iframe {
   .about{
     font-size: 40px;
   }
+  #canvas{
+    display:none
+  }
   /* Projects */
   .projects-intro{
     font-size: 40px;
@@ -490,4 +519,28 @@ iframe {
     width: 300px;
     margin: 0 auto
   }
+  /*Music*/
+  .music-intro{
+    font-size: 40px;
+    border-bottom: none;
+    border-right: none;
+    padding-bottom: 25px;
+    text-align: center;
+    float: none;
+  }
+  iframe{
+    display: none
+  }
+  .music-images{
+    display: flex;
+    flex-direction: column;
+   }
+   .container{
+    margin: 0 auto
+  }
+  .mi{
+    width: 200px;
+padding: 0px;
+  }
+  
 } 

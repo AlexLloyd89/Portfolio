@@ -8,9 +8,22 @@ $(document).ready(function() {
   AOS.init();
   //Year
   $("#year").text(new Date().getFullYear());
+  //Text Change
+  if ($(window).width()<769){
+    $('.music-intro').text('tHe noise:');
+  }else{
+    $('.music-intro').text('tHe noise');
+  }
+});
+  $( window ).resize(function() {
+    if($( window ).width() < 769){
+      $('.music-intro').text('tHe noise:');
+  }else{
+    $('.music-intro').text('tHe noise');
+  }
+
   // Painting
   function OilPainting(){
-  
     var canvas;
     var context;
   
